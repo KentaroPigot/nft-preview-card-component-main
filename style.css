@@ -1,0 +1,184 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --dark-blue-main-BG: hsl(217, 54%, 11%);
+    --dark-blue-card-BG: hsl(216, 50%, 16%);
+    --dark-blue-line: hsla(215, 32%, 27%, 0.4);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--dark-blue-main-BG);
+    width: 100vw;
+    overflow: hidden;
+}
+
+.card {
+    margin: 5em auto;
+    font-family: 'Outfit', sans-serif;
+    max-width: 20em;
+    background-color: var(--dark-blue-card-BG);
+    border-radius: 0.8em;
+    box-shadow: 0 0.1em 5em rgba(0, 0, 0, 0.4);
+}
+
+
+.container {
+    padding: 1.3em;
+}
+/*
+.image:hover {
+    background-color: hsla(178, 100%, 50%, 0.4);
+}*/
+
+
+
+.equ-number:hover,
+.profil span:hover {
+    color: var(--Cyan);
+}
+
+.container .image {
+    position: relative;
+}
+
+.container .image .equilibrium {
+    border-radius: 0.4em;
+}
+
+.container .image .overlay{
+    position: absolute;
+    /*opacity: 0;*/
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.4);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.container .image .overlay:hover{
+    opacity: 1;
+}
+
+
+.content>* {
+    margin: 1em 0;
+}
+
+.content h1 {
+    color: var(--White);
+    font-size: 1.4em;
+}
+
+.content p {
+    color: var(--Soft-blue);
+}
+
+.amount-daysleft {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.amount-daysleft h2 {
+    color: var(--Cyan);
+    font-size: 1em;
+}
+
+.amount-daysleft img {
+    display: inline-block;
+    margin-right: 0.5em;
+    position: relative;
+    top: 0.2em;
+}
+
+.profil {
+    border-top: 2px solid var(--dark-blue-line);
+}
+
+.profil {
+    color: var(--Soft-blue);
+    font-size: 0.9em;
+    padding: 0.6em 0;
+}
+
+.profil span {
+    color: var(--White);
+}
+
+.profil img {
+    max-width: 2em;
+    border: 1px solid var(--White);
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    top: 0.5em;
+    margin-right: 0.7em;
+}
